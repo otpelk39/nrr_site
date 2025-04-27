@@ -1,0 +1,473 @@
+{% extends 'base.html' %}
+
+{% block title %}NOVA Repair and Remodel - Project Showcase{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="relative pt-32 pb-20 md:pt-40 md:pb-28 text-white">
+    <div class="absolute inset-0 bg-primary-900 z-0"></div>
+    <div class="container mx-auto px-4 relative z-10">
+        <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Our Project Showcase</h1>
+            <p class="text-xl text-primary-200 mb-10">Explore our portfolio of completed projects that demonstrate our commitment to quality craftsmanship</p>
+        </div>
+    </div>
+</section>
+
+<!-- Project Filter -->
+<section class="py-10 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-wrap justify-center gap-4 mb-8">
+            <button class="px-6 py-2 rounded-md bg-primary-600 text-white font-medium portfolio-filter active" data-filter="all">All Projects</button>
+            <button class="px-6 py-2 rounded-md bg-gray-200 hover:bg-primary-600 hover:text-white text-gray-800 font-medium transition-colors portfolio-filter" data-filter="kitchen">Kitchens</button>
+            <button class="px-6 py-2 rounded-md bg-gray-200 hover:bg-primary-600 hover:text-white text-gray-800 font-medium transition-colors portfolio-filter" data-filter="bathroom">Bathrooms</button>
+            <button class="px-6 py-2 rounded-md bg-gray-200 hover:bg-primary-600 hover:text-white text-gray-800 font-medium transition-colors portfolio-filter" data-filter="addition">Additions</button>
+            <button class="px-6 py-2 rounded-md bg-gray-200 hover:bg-primary-600 hover:text-white text-gray-800 font-medium transition-colors portfolio-filter" data-filter="outdoor">Outdoor</button>
+            <button class="px-6 py-2 rounded-md bg-gray-200 hover:bg-primary-600 hover:text-white text-gray-800 font-medium transition-colors portfolio-filter" data-filter="other">Other</button>
+        </div>
+    </div>
+</section>
+
+<!-- Projects Grid -->
+<section class="py-10 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="portfolio-grid">
+            <!-- Project 1 - Kitchen -->
+            <div class="portfolio-item" data-category="kitchen">
+                <div class="bg-white rounded-lg overflow-hidden shadow-xl hover:shadow-2xl transition-shadow">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.pexels.com/photos/2062426/pexels-photo-2062426.jpeg" alt="Modern kitchen remodel" class="w-full h-full object-cover" />
+                        <div class="absolute inset-0 bg-primary-900/70 opacity-0 hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <button class="text-white bg-secondary-500 hover:bg-secondary-600 px-4 py-2 rounded-md font-medium transition-colors project-details-btn" data-id="1">View Details</button>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary-900 mb-2">Luxury Kitchen Renovation</h3>
+                        <p class="text-gray-700 mb-4">Complete transformation of an outdated kitchen into a modern culinary space.</p>
+                        <div class="flex">
+                            <span class="inline-block bg-primary-100 text-primary-600 px-3 py-1 rounded-full text-sm font-medium">Kitchen</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 2 - Bathroom -->
+            <div class="portfolio-item" data-category="bathroom">
+                <div class="bg-white rounded-lg overflow-hidden shadow-xl hover:shadow-2xl transition-shadow">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.pexels.com/photos/1910472/pexels-photo-1910472.jpeg" alt="Elegant bathroom remodel" class="w-full h-full object-cover" />
+                        <div class="absolute inset-0 bg-primary-900/70 opacity-0 hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <button class="text-white bg-secondary-500 hover:bg-secondary-600 px-4 py-2 rounded-md font-medium transition-colors project-details-btn" data-id="2">View Details</button>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary-900 mb-2">Spa-Inspired Bathroom</h3>
+                        <p class="text-gray-700 mb-4">Complete bathroom renovation focused on creating a relaxing retreat.</p>
+                        <div class="flex">
+                            <span class="inline-block bg-primary-100 text-primary-600 px-3 py-1 rounded-full text-sm font-medium">Bathroom</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 3 - Other -->
+            <div class="portfolio-item" data-category="other">
+                <div class="bg-white rounded-lg overflow-hidden shadow-xl hover:shadow-2xl transition-shadow">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg" alt="Home office renovation" class="w-full h-full object-cover" />
+                        <div class="absolute inset-0 bg-primary-900/70 opacity-0 hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <button class="text-white bg-secondary-500 hover:bg-secondary-600 px-4 py-2 rounded-md font-medium transition-colors project-details-btn" data-id="3">View Details</button>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary-900 mb-2">Modern Home Office</h3>
+                        <p class="text-gray-700 mb-4">Garage conversion into a functional and stylish home office space.</p>
+                        <div class="flex">
+                            <span class="inline-block bg-primary-100 text-primary-600 px-3 py-1 rounded-full text-sm font-medium">Other</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 4 - Kitchen -->
+            <div class="portfolio-item" data-category="kitchen">
+                <div class="bg-white rounded-lg overflow-hidden shadow-xl hover:shadow-2xl transition-shadow">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.pexels.com/photos/3214064/pexels-photo-3214064.jpeg" alt="Traditional kitchen renovation" class="w-full h-full object-cover" />
+                        <div class="absolute inset-0 bg-primary-900/70 opacity-0 hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <button class="text-white bg-secondary-500 hover:bg-secondary-600 px-4 py-2 rounded-md font-medium transition-colors project-details-btn" data-id="4">View Details</button>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary-900 mb-2">Traditional Kitchen Update</h3>
+                        <p class="text-gray-700 mb-4">Renovation blending classic elements with modern functionality.</p>
+                        <div class="flex">
+                            <span class="inline-block bg-primary-100 text-primary-600 px-3 py-1 rounded-full text-sm font-medium">Kitchen</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 5 - Bathroom -->
+            <div class="portfolio-item" data-category="bathroom">
+                <div class="bg-white rounded-lg overflow-hidden shadow-xl hover:shadow-2xl transition-shadow">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.pexels.com/photos/6585764/pexels-photo-6585764.jpeg" alt="Modern bathroom with shower" class="w-full h-full object-cover" />
+                        <div class="absolute inset-0 bg-primary-900/70 opacity-0 hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <button class="text-white bg-secondary-500 hover:bg-secondary-600 px-4 py-2 rounded-md font-medium transition-colors project-details-btn" data-id="5">View Details</button>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary-900 mb-2">Contemporary Master Bath</h3>
+                        <p class="text-gray-700 mb-4">Complete redesign with premium fixtures and walk-in shower.</p>
+                        <div class="flex">
+                            <span class="inline-block bg-primary-100 text-primary-600 px-3 py-1 rounded-full text-sm font-medium">Bathroom</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 6 - Addition -->
+            <div class="portfolio-item" data-category="addition">
+                <div class="bg-white rounded-lg overflow-hidden shadow-xl hover:shadow-2xl transition-shadow">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg" alt="Home addition with kitchen" class="w-full h-full object-cover" />
+                        <div class="absolute inset-0 bg-primary-900/70 opacity-0 hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <button class="text-white bg-secondary-500 hover:bg-secondary-600 px-4 py-2 rounded-md font-medium transition-colors project-details-btn" data-id="6">View Details</button>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary-900 mb-2">Open Concept Kitchen Addition</h3>
+                        <p class="text-gray-700 mb-4">Home expansion creating a spacious, light-filled kitchen and dining area.</p>
+                        <div class="flex">
+                            <span class="inline-block bg-primary-100 text-primary-600 px-3 py-1 rounded-full text-sm font-medium">Addition</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 7 - Outdoor -->
+            <div class="portfolio-item" data-category="outdoor">
+                <div class="bg-white rounded-lg overflow-hidden shadow-xl hover:shadow-2xl transition-shadow">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.pexels.com/photos/1643384/pexels-photo-1643384.jpeg" alt="Backyard deck" class="w-full h-full object-cover" />
+                        <div class="absolute inset-0 bg-primary-900/70 opacity-0 hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <button class="text-white bg-secondary-500 hover:bg-secondary-600 px-4 py-2 rounded-md font-medium transition-colors project-details-btn" data-id="7">View Details</button>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary-900 mb-2">Custom Deck & Patio</h3>
+                        <p class="text-gray-700 mb-4">Outdoor living space featuring composite decking and stone patio.</p>
+                        <div class="flex">
+                            <span class="inline-block bg-primary-100 text-primary-600 px-3 py-1 rounded-full text-sm font-medium">Outdoor</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 8 - Addition -->
+            <div class="portfolio-item" data-category="addition">
+                <div class="bg-white rounded-lg overflow-hidden shadow-xl hover:shadow-2xl transition-shadow">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.pexels.com/photos/1080721/pexels-photo-1080721.jpeg" alt="Home office addition" class="w-full h-full object-cover" />
+                        <div class="absolute inset-0 bg-primary-900/70 opacity-0 hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <button class="text-white bg-secondary-500 hover:bg-secondary-600 px-4 py-2 rounded-md font-medium transition-colors project-details-btn" data-id="8">View Details</button>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary-900 mb-2">Sunroom Addition</h3>
+                        <p class="text-gray-700 mb-4">Light-filled extension providing additional living space with views.</p>
+                        <div class="flex">
+                            <span class="inline-block bg-primary-100 text-primary-600 px-3 py-1 rounded-full text-sm font-medium">Addition</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 9 - Outdoor -->
+            <div class="portfolio-item" data-category="outdoor">
+                <div class="bg-white rounded-lg overflow-hidden shadow-xl hover:shadow-2xl transition-shadow">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.pexels.com/photos/1024359/pexels-photo-1024359.jpeg" alt="Outdoor kitchen" class="w-full h-full object-cover" />
+                        <div class="absolute inset-0 bg-primary-900/70 opacity-0 hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <button class="text-white bg-secondary-500 hover:bg-secondary-600 px-4 py-2 rounded-md font-medium transition-colors project-details-btn" data-id="9">View Details</button>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary-900 mb-2">Outdoor Kitchen & Fireplace</h3>
+                        <p class="text-gray-700 mb-4">Complete outdoor entertaining space with built-in appliances.</p>
+                        <div class="flex">
+                            <span class="inline-block bg-primary-100 text-primary-600 px-3 py-1 rounded-full text-sm font-medium">Outdoor</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Project Modal -->
+<div id="project-modal" class="fixed inset-0 flex items-center justify-center z-50 hidden">
+    <div class="absolute inset-0 bg-black opacity-75 project-modal-overlay"></div>
+    <div class="relative bg-white rounded-lg w-full max-w-4xl max-h-[90vh] overflow-auto">
+        <button class="absolute top-4 right-4 text-gray-500 hover:text-gray-700 z-10 project-modal-close">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+        <div class="p-6" id="project-modal-content">
+            <!-- Content will be dynamically loaded -->
+        </div>
+    </div>
+</div>
+
+<!-- Call to Action -->
+<section class="relative py-20 text-white">
+    <div class="absolute inset-0 bg-primary-900 z-0"></div>
+    <div class="absolute inset-0 opacity-20 z-0">
+        <img src="https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg" alt="Kitchen remodel background" class="w-full h-full object-cover" />
+    </div>
+    <div class="container mx-auto px-4 relative z-10">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Start Your Next Project?</h2>
+            <p class="text-xl mb-8">Contact us today to schedule a consultation and get a detailed estimate for your home improvement project.</p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="{{ url_for('project_planner') }}" class="bg-secondary-500 hover:bg-secondary-600 text-white px-8 py-4 rounded-md transition-colors text-lg font-medium">Get a Free Estimate</a>
+                <a href="tel:+17035551234" class="bg-transparent hover:bg-white/10 border-2 border-white text-white px-8 py-4 rounded-md transition-colors text-lg font-medium">Call Us: (703) 555-1234</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Portfolio filtering
+        const filterButtons = document.querySelectorAll('.portfolio-filter');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+        
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Update active button
+                filterButtons.forEach(btn => {
+                    btn.classList.remove('active', 'bg-primary-600', 'text-white');
+                    btn.classList.add('bg-gray-200', 'text-gray-800');
+                });
+                button.classList.add('active', 'bg-primary-600', 'text-white');
+                button.classList.remove('bg-gray-200', 'text-gray-800');
+                
+                const filterValue = button.getAttribute('data-filter');
+                
+                // Filter items
+                portfolioItems.forEach(item => {
+                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+        
+        // Project modal
+        const modal = document.getElementById('project-modal');
+        const modalContent = document.getElementById('project-modal-content');
+        const modalClose = document.querySelector('.project-modal-close');
+        const modalOverlay = document.querySelector('.project-modal-overlay');
+        const detailButtons = document.querySelectorAll('.project-details-btn');
+        
+        function openModal(projectId) {
+            // Sample project data - in a real app, this would come from your database
+            const projectData = {
+                1: {
+                    title: "Luxury Kitchen Renovation",
+                    location: "Arlington, VA",
+                    timeframe: "8 weeks",
+                    description: "This comprehensive kitchen renovation transformed an outdated space into a chef's dream. The project included custom cabinetry, quartz countertops, high-end appliances, and a large center island with seating. The open layout creates a perfect space for both cooking and entertaining.",
+                    features: ["Custom maple cabinets with soft-close drawers", "Quartz countertops with waterfall edges", "Professional-grade stainless steel appliances", "Large island with seating for 4", "Pendant lighting", "Tile backsplash", "Wide-plank hardwood flooring"],
+                    images: [
+                        "https://images.pexels.com/photos/2062426/pexels-photo-2062426.jpeg",
+                        "https://images.pexels.com/photos/1080721/pexels-photo-1080721.jpeg",
+                        "https://images.pexels.com/photos/3214064/pexels-photo-3214064.jpeg",
+                        "https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg"
+                    ]
+                },
+                2: {
+                    title: "Spa-Inspired Bathroom",
+                    location: "Alexandria, VA",
+                    timeframe: "6 weeks",
+                    description: "This master bathroom renovation created a spa-like retreat for the homeowners. The project included a large walk-in shower with multiple shower heads, a freestanding soaking tub, double vanity with ample storage, and heated floors for year-round comfort.",
+                    features: ["Walk-in shower with rainfall head and body jets", "Freestanding soaking tub", "Double vanity with undermount sinks", "Heated porcelain tile flooring", "LED backlit mirror", "Linen tower for storage", "Water-efficient fixtures"],
+                    images: [
+                        "https://images.pexels.com/photos/1910472/pexels-photo-1910472.jpeg",
+                        "https://images.pexels.com/photos/6585764/pexels-photo-6585764.jpeg",
+                        "https://images.pexels.com/photos/1457847/pexels-photo-1457847.jpeg",
+                        "https://images.pexels.com/photos/6032248/pexels-photo-6032248.jpeg"
+                    ]
+                },
+                3: {
+                    title: "Modern Home Office",
+                    location: "Falls Church, VA",
+                    timeframe: "4 weeks",
+                    description: "This project involved converting an underutilized garage into a functional home office space. The renovation included insulation, drywall, electrical upgrades, custom built-in shelving and desk, and large windows to bring in natural light.",
+                    features: ["Custom built-in desk and shelving", "Hardwood flooring", "Recessed lighting and task lighting", "Large windows for natural light", "Smart home integration", "Soundproofing insulation", "Dedicated HVAC zone"],
+                    images: [
+                        "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg",
+                        "https://images.pexels.com/photos/1957477/pexels-photo-1957477.jpeg",
+                        "https://images.pexels.com/photos/667838/pexels-photo-667838.jpeg",
+                        "https://images.pexels.com/photos/7594063/pexels-photo-7594063.jpeg"
+                    ]
+                }
+            };
+            
+            // Get project data or use a default message if not found
+            const project = projectData[projectId] || { title: "Project Details", description: "Project information is not available." };
+            
+            // Generate modal content
+            let content = `
+                <div class="swiper project-swiper mb-6 rounded-lg overflow-hidden">
+                    <div class="swiper-wrapper">
+            `;
+            
+            // Add images to swiper
+            if (project.images && project.images.length > 0) {
+                project.images.forEach(img => {
+                    content += `
+                        <div class="swiper-slide">
+                            <img src="${img}" alt="${project.title}" class="w-full h-64 md:h-96 object-cover" />
+                        </div>
+                    `;
+                });
+            } else {
+                content += `
+                    <div class="swiper-slide">
+                        <div class="w-full h-64 md:h-96 bg-gray-200 flex items-center justify-center">
+                            <p class="text-gray-500">No images available</p>
+                        </div>
+                    </div>
+                `;
+            }
+            
+            content += `
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+                
+                <h2 class="text-3xl font-bold text-primary-900 mb-4">${project.title}</h2>
+            `;
+            
+            if (project.location || project.timeframe) {
+                content += `
+                    <div class="flex flex-wrap gap-4 mb-6">
+                `;
+                
+                if (project.location) {
+                    content += `
+                        <div class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                            <span class="text-gray-700">${project.location}</span>
+                        </div>
+                    `;
+                }
+                
+                if (project.timeframe) {
+                    content += `
+                        <div class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            <span class="text-gray-700">Timeframe: ${project.timeframe}</span>
+                        </div>
+                    `;
+                }
+                
+                content += `
+                    </div>
+                `;
+            }
+            
+            if (project.description) {
+                content += `
+                    <div class="mb-6">
+                        <h3 class="text-xl font-semibold text-primary-900 mb-3">Project Overview</h3>
+                        <p class="text-gray-700">${project.description}</p>
+                    </div>
+                `;
+            }
+            
+            if (project.features && project.features.length > 0) {
+                content += `
+                    <div>
+                        <h3 class="text-xl font-semibold text-primary-900 mb-3">Key Features</h3>
+                        <ul class="list-disc pl-6 text-gray-700">
+                `;
+                
+                project.features.forEach(feature => {
+                    content += `<li class="mb-2">${feature}</li>`;
+                });
+                
+                content += `
+                        </ul>
+                    </div>
+                `;
+            }
+            
+            content += `
+                <div class="mt-8 pt-6 border-t border-gray-200">
+                    <a href="{{ url_for('project_planner') }}" class="inline-block bg-secondary-500 hover:bg-secondary-600 text-white px-6 py-3 rounded-md transition-colors text-lg font-medium">Start a Similar Project</a>
+                </div>
+            `;
+            
+            // Update modal content and show modal
+            modalContent.innerHTML = content;
+            modal.classList.remove('hidden');
+            
+            // Initialize swiper for project images
+            const projectSwiper = new Swiper('.project-swiper', {
+                loop: true,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+        }
+        
+        function closeModal() {
+            modal.classList.add('hidden');
+        }
+        
+        // Event listeners for modal
+        detailButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const projectId = button.getAttribute('data-id');
+                openModal(projectId);
+            });
+        });
+        
+        modalClose.addEventListener('click', closeModal);
+        modalOverlay.addEventListener('click', closeModal);
+        
+        // Close modal with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        });
+    });
+</script>
+{% endblock %}

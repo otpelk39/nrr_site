@@ -1,0 +1,90 @@
+/* Custom styles beyond Tailwind */
+
+/* Testimonial dots styling */
+.testimonial-dot.active {
+    opacity: 1 !important;
+}
+
+/* Carousel styling */
+.swiper-pagination-bullet {
+    background-color: #fff !important;
+    opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1 !important;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #fff !important;
+}
+
+/* Animation classes */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.animate-on-scroll.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Lazy load image placeholder */
+.lazy-load {
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+img:not(.lazy-load) {
+    opacity: 1;
+}
+
+/* Custom focus styles for better accessibility */
+*:focus-visible {
+    outline: 2px solid #0ea5e9;
+    outline-offset: 2px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #0c4a6e;
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #075985;
+}
+
+/* Hero section parallax effect */
+.parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Custom form elements styling */
+input[type="radio"], input[type="checkbox"] {
+    cursor: pointer;
+}
+
+.form-select {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 0.5rem center;
+    background-repeat: no-repeat;
+    background-size: 1.5em 1.5em;
+    padding-right: 2.5rem;
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+}
